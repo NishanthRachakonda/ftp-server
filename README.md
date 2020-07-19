@@ -41,10 +41,10 @@ Following commands are currently working
 
 Command | Use
 --- | ---
-DIR <dir> | Change directory
+DIR \<dir\> | Change directory
 LIST | list all files in directory
-COPY <source> <destination> | copy file from source to destination
-ZIP <folder> <file.zip> | recursive zip to copy large datasets easily. 
+COPY \<source\> \<destinatio\> | copy file from source to destination
+ZIP \<folder\> \<file.zip\> | recursive zip to copy large datasets easily. 
 
 ## License 
 
