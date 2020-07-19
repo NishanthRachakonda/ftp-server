@@ -1,0 +1,27 @@
+version: '3'
+services:
+  server:
+    container_name: server
+    build: 
+      context: ./server
+      dockerfile: Dockerfile
+    image: ftp/server
+    ports: 
+      - "5056:5056"
+    volumes: 
+      - /home/nishanth/Public/:/mnt/data/
+    networks:
+      ftp_network:
+          ipv4_address: 172.20.0.4
+  client:
+    container_name: client
+    build: 
+      context: ./client
+      dockerfile: Dockerfile
+    image: ftp/client
+networks:
+  ftp_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24
